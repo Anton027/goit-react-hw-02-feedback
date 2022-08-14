@@ -1,16 +1,19 @@
 import { Box } from "components/Box"
-export const FeedbackOptions = ({ options: { good, neutral, bad }, onLeaveFeedback }) => {
+// import { ReactPropTypes } from "react"
+export const FeedbackOptions = ({ options: { good, neutral, bad }, onLeaveFeedbackGood, onLeaveFeedbackNeutral,onLeaveFeedbackBad }) => {
     return (
         <Box as={'ul'} display='flex' gridGap="10px">
             <li>
-                <button onClick={() =>  onLeaveFeedback }>{`Good ${good}`}</button>
+                <button onClick={onLeaveFeedbackGood}>Good</button>
             </li>
             <li>
-                <button onClick={() =>onLeaveFeedback}>{neutral}</button>
+                <button onClick={onLeaveFeedbackNeutral}>Neutral</button>
             </li>
             <li>
-                <button onClick={() =>  onLeaveFeedback}>{bad}</button>
+                <button onClick={onLeaveFeedbackBad}>Bad</button>
             </li>
         </Box>
     )
 }
+
+FeedbackOptions.propTypes = {};

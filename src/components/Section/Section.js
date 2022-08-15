@@ -9,9 +9,9 @@ export const Section = ({ title, children }) => {
             marginRight="auto"
             marginTop="30px"
         >
-            <h2>
+            <Box as="h2" marginBottom="15px">
                 {title}
-            </h2>
+            </Box>
             {children}
         </Box>
     )
